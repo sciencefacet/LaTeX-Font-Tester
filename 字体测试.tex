@@ -1,0 +1,43 @@
+% !TeX program = xelatex
+% !TeX spellcheck = en_US
+% !TeX encoding = UTF-8
+
+\documentclass[10pt]{book}
+\usepackage{ctex}
+\usepackage[a6paper, left=0.2cm, right=0.2cm]{geometry}
+
+\xeCJKsetup{AutoFallBack}
+\newCJKfontfamily{\mingti}[Path=./fonts/,Extension=.ttf, FallBack={[Path=./fonts/]HanaMinB.ttf}]{HanaMinA.ttf}
+
+\newCJKfontfamily{\FZKai}[Path=./fonts/,Extension=.ttf, FallBack={[Path=./fonts/]FZKaiS(SIP).ttf}]{FZKaiS.ttf}
+
+\newCJKfontfamily{\ZHSong}[Path=./fonts/,Extension=.ttf, FallBack={[Path=./fonts/]ZhongHuaShuJu-Song-2.ttf}]{ZhongHuaShuJu-Song-1.ttf}
+
+\newcommand{\teststring}{%
+\begin{tabular}{|r|c|}
+	\hline
+	\char"7B80\char"4F53\char"4E2D\char"6587\char"FF1A & 
+	\char"7FA9\char"79AE\char"8AAA\char"9078 \\ \hline
+	\char"7E41\char"4F53\char"4E2D\char"6587\char"FF1A & 
+	\char"4E49\char"793C\char"8BF4\char"9009 \\ \hline
+	CJK\char"6269\char"5C55 A\char"533A\char"FF1A & 
+	\char"385B\char"3B10\char"35A7\char"4D4D \\ \hline
+	CJK\char"6269\char"5C55 B\char"533A\char"FF1A & 
+	\char"236A3\char"4D85\char"2A606\char"26795 \\ \hline
+	CJK\char"6269\char"5C55 C\char"533A\char"FF1A & 
+	\char"2A8A8\char"2AA96\char"2B53A\char"2B734 \\ \hline
+	CJK\char"6269\char"5C55 D\char"533A\char"FF1A & 
+	\char"2B740\char"2B782\char"2B77B\char"2B81D \\ \hline
+	CJK\char"6269\char"5C55 E\char"533A\char"FF1A & 
+	\char"2B82B\char"2C69A\char"2CCD5\char"2CEA1 \\ \hline
+\end{tabular}}
+
+\begin{document}
+	
+\noindent\mingti \teststring
+\quad
+\FZKai \teststring
+
+\noindent\ZHSong \teststring
+
+\end{document}
